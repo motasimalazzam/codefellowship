@@ -61,8 +61,7 @@
         <span th:text="${post.body}"></span>
 
         <a th:href="@{'/users/' + ${post.appUser.id}}">
-          <span th:text="${post.appUser.firstname}"></span>
-          <span th:text="${post.appUser.lastname}"></span>
+          <span th:text="${post.appUser.username}"></span>
         </a>
       </li>
     </ul>
