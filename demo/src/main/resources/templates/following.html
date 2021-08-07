@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www,thymeleaf.org">
+
   <head>
     <meta charset="UTF-8">
-    <title>Add a Post</title>
+    <title>Following</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="/styles.css" rel="stylesheet" />
   </head>
+
   <body>
 
     <header>
@@ -46,13 +47,18 @@
     </header>
 
     <main>
-      <form method="POST" action="/posts" >
+      <h2>Who I'm Following</h2>
 
-        <p><label for="body">Create a post</label>
-          <textarea name="body" id="body" rows="10" cols="600"></textarea></p>
+      <ul class="following-list">
+        <li th:each="user : ${users}">
+          <a th:href="@{'/users/' + ${user.id}}">
+            <span th:text="${user.firstname}"></span>
+            <span th:text="${user.lastname}"></span>
+          </a>
 
-        <input type="submit" />
-      </form>
+        </li>
+      </ul>
+
     </main>
 
 

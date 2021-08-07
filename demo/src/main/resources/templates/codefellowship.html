@@ -1,64 +1,74 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www,thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <title>Codefellowship</title>
-    <link
-            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-            crossorigin="anonymous"
-    >
-    <link href="./style.css" rel="stylesheet">
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <title>Codefellowship</title>
+        <link
+                href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+                rel="stylesheet"
+                integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+                crossorigin="anonymous"
+        >
+        <link href="./style.css" rel="stylesheet">
+    </head>
 
-<header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <span class="navbar-brand mb-0 h1">Codefellowship</span>
+    <body>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/login">Login</a>
-                </li>
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+                <span class="navbar-brand mb-0 h1">Codefellowship</span>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="/signup">Signup</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/myprofile">My Profile</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/logout">Logout</a>
-                </li>
-            </ul>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/login">Login</a>
+                        </li>
 
-        </div>
-    </nav>
-</header>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/signup">Signup</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/myprofile">My Profile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/logout">Logout</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/users">Users</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/following">Following</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/feed">Feed</a>
+                        </li>
+                    </ul>
 
-<main>
+                </div>
+            </nav>
+        </header>
 
-    <div class="jumbotron">
-        <h1 class="display-4">Codefellowship</h1>
-        <h2>Welcome, <span th:text="${principal}"></span>!</h2>
-        <p class="lead">CodeFellowship allows anyone who wants to learn programming to gain skills and experience from other users.</p>
-        <hr class="my-4">
-        <p>What are you waiting for ? Sign Up Now !</p>
-        <p class="lead">
-            <a class="btn btn-primary btn-lg" href="/signup" role="button">Signup</a>
-        </p>
-    </div>
+        <main>
 
-</main>
+            <div class="jumbotron">
+                <h1 class="display-4">Codefellowship</h1>
+                <h2>Welcome, <span th:text="${principal}"></span>!</h2>
+                <p class="lead">CodeFellowship allows anyone who wants to learn programming to gain skills and experience from other users.</p>
+                <hr class="my-4">
+                <p>What are you waiting for ? Sign Up Now !</p>
+                <p class="lead">
+                    <a class="btn btn-primary btn-lg" href="/signup" role="button">Signup</a>
+                </p>
+            </div>
 
-<footer>
-    <p>copyright 2021 Motasim Al-azzam</p>
-</footer>
+        </main>
 
-</body>
+        <footer>
+            <p>copyright 2021 Motasim Al-azzam</p>
+        </footer>
+
+    </body>
 </html>
