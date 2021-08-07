@@ -10,6 +10,7 @@ The programing language used to build this project is Java and using the Spring 
 
 **Author**: Motasim Al-Azzam 
 
+
 ## Lab: 16 - Spring Auth and Lab: 17 - Spring Authorization
 
 ### Classes
@@ -107,4 +108,25 @@ spring.jpa.database-platform=org.hibernate.dialect.PostgreSQLDialect
    * \dt 
 
    * select * from album;
+
+### I worked with **Maryam Najjar** as a partner.
+
  
+ ## Lab: 18 - Spring Security against User Input
+
+ ### Routers:
+
+ #### [http://localhost:8080/users](http://localhost:8080/users)
+
+ * This route for a page that displays all users and also the user can follow any user by click on the Follow button.
+
+ #### [http://localhost:8080/following](http://localhost:8080/following)
+
+ * This route for a page that allows the user to view a list of the users he/she has followed.
+
+ #### [http://localhost:8080/feed](http://localhost:8080/feed)
+
+ * This route for a page that allows the user to view the posts of the users he/she has followed.
+
+ ### I worked with **Maryam Najjar** as a partner.
+
