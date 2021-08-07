@@ -107,7 +107,6 @@ spring.jpa.database-platform=org.hibernate.dialect.PostgreSQLDialect
 
    * \dt 
 
-   * select * from album;
 
 ### I worked with **Maryam Najjar** as a partner.
 
