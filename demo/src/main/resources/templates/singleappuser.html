@@ -13,6 +13,10 @@
 <p>Date of Birth: <span th:text="${appUser.dob}"></span></p>
 <p>Bio: <span th:text="${appUser.bio}"></span></p>
 
+<form class="follow-button-form" method="POST" th:action="'/follow/' + ${appUser.id}" >
+  <button type="submit">Follow</button>
+</form>
+
 
 </body>
 </html>

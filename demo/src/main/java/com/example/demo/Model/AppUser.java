@@ -7,6 +7,7 @@ import javax.persistence.*;
 import java.util.Collection;
 import java.util.Date;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 public class AppUser implements UserDetails {
@@ -25,9 +26,16 @@ public class AppUser implements UserDetails {
     @OneToMany(mappedBy = "appUser")
     List<Post> posts;
 
-    public AppUser(){}
+    @ManyToMany
+    private Set<AppUser> followers;
 
-    public AppUser(String username,String password, Date dob, String firstname, String lastname, String bio){
+    @ManyToMany
+   private Set<AppUser> following;
+
+    public AppUser() {
+    }
+
+    public AppUser(String username, String password, Date dob, String firstname, String lastname, String bio) {
         this.password = password;
         this.username = username;
         this.dob = dob;
@@ -36,7 +44,7 @@ public class AppUser implements UserDetails {
         this.bio = bio;
     }
 
-    public AppUser(String username, String password){
+    public AppUser(String username, String password) {
         this.password = password;
         this.username = username;
     }
@@ -129,5 +137,21 @@ public class AppUser implements UserDetails {
 
     public void setPosts(List<Post> posts) {
         this.posts = posts;
+    }
+
+    public Set<AppUser> getFollowers() {
+        return followers;
+    }
+
+    public void setFollowers(Set<AppUser> followers) {
+        this.followers = followers;
+    }
+
+    public Set<AppUser> getFollowing() {
+        return following;
+    }
+
+    public void setFollowing(Set<AppUser> following) {
+        this.following = following;
     }
 }
