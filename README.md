@@ -129,3 +129,6 @@ spring.jpa.database-platform=org.hibernate.dialect.PostgreSQLDialect
 
  ### I worked with **Maryam Najjar** as a partner.
 
+## Lab: 19 - Polish CodeFellowship
+
+* In this lab, I added CSS and modified the design of the web app

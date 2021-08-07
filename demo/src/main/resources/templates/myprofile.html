@@ -83,18 +83,23 @@
         </div>
       </div>
 
-      <div th:replace="fragments/post :: post">...</div>
 
-      <ul>
-        <li th:each="post : ${appUser.posts}">
-          <p><span th:text="${post.createdAt}"></span></p>
-          <p><span th:text="${post.body}"></span></p>
-        </li>
-      </ul>
+        <div th:replace="fragments/post :: post">...</div>
+
+
+      <div th:each="post : ${appUser.posts}" style="margin-top: 50px; padding-top: 50px; border-style: dotted;">
+        <div class="card"  >
+          <div class="card-body" >
+            <p class="card-text">Post: <span th:text="${post.body}"></span></p>
+            <p class="card-text">Created at: <span th:text="${post.createdAt}"></span></p>
+          </div>
+        </div>
+
+      </div>
+
+
+
     </main>
 
-    <footer>
-      <p>copyright 2021 Motasim Al-azzam</p>
-    </footer>
   </body>
 </html>

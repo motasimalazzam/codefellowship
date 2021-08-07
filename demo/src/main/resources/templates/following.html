@@ -55,8 +55,7 @@
       <ul class="following-list">
         <li th:each="user : ${users}">
           <a th:href="@{'/users/' + ${user.id}}">
-            <span th:text="${user.firstname}"></span>
-            <span th:text="${user.lastname}"></span>
+            <span th:text="${user.username}"></span>
           </a>
 
         </li>

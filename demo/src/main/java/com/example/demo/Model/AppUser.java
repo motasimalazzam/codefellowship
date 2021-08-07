@@ -16,7 +16,9 @@ public class AppUser implements UserDetails {
     @GeneratedValue(strategy = GenerationType.AUTO)
     long id;
 
+    @Column(unique = true)
     String username;
+
     String password;
     Date dob;
     String firstname;
